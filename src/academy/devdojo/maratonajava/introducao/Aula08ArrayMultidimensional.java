@@ -31,7 +31,7 @@ public class Aula08ArrayMultidimensional {
         System.out.println();
         for (int i = 0; i < arrayInt2.length; i++) {
             for (int j = 0; j < arrayInt2[i].length; j++) {
-                System.out.print(i + "" + j + " ");
+                System.out.print(i * 10 + j + " ");
             }
             System.out.println();
         }
@@ -42,6 +42,32 @@ public class Aula08ArrayMultidimensional {
         for (int[] i : arrayint3) {
             for (int j : i) {
                 System.out.print(j + " ");
+            }
+            System.out.println();
+        }
+
+        int[][][][] arr = new int[3][3][3][3];
+
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
+                for (int k = 0; k < 3; k++) {
+                    for (int l = 0; l < 3; l++) {
+                        arr[i][j][k][l] = 10000 + i * 1000 + j * 100 + k * 10 + l;
+                    }
+                }
+            }
+        }
+
+        System.out.println();
+        for (int[][][] i : arr) {
+            for (int[][] j : i) {
+                for (int[] k : j) {
+                    for (int l : k) {
+                        System.out.print(l + " ");
+                    }
+                    System.out.println();
+                }
+                System.out.println();
             }
             System.out.println();
         }
